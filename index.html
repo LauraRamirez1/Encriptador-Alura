@@ -9,46 +9,41 @@
 </head>
     <body>
         <header>
-            <div>
-                <h1>CIFRA <strong>DOS</strong></h1>
-                <P>Envía mensajes con la maxima seguridad.</P>
-            </div>
+            <nav>
+                <img src="./img/a_logo.png" alt="">
+            </nav>
         </header>
         <main class="general-box">
-            <section class="container-encryptor">
-                <div class="message-detector">
-                    <div class="text-box">
-                        <div>
-                            <h5></h5>
-                            <img src="" alt="">
-                        </div>
-                        <div>
-                            <textarea name="" id=""></textarea>
-                        </div>
-                        <div>
-                            <p>0 caracteres/1000</p>
-                            <button>Cifrar</button>
-                        </div>
+            <div class="text_container">
+                <div class="text_input" >
+                    <textarea type="text" id="inputText" placeholder="Ingrese el texto aqui" oninput="toggleImage()"></textarea>
+                </div>
+                <div>
+                    <button class="btn" onclick="encryptText()">Encriptar</button>
+                    <button class="btn" onclick="decryptText()">Desencriptar</button>
+                </div>
+            </div>
+            <div class="image_Container">
+                <div id="imageContainer" class="img_box">
+                    <img src="./img/lupa.png" alt="Imagen placeholder" id="placeholderImage">
+                    <h5>Ningún mensaje fue encontrado</h5>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+                <div id="outputContainer" class="outputContainer">
+                    <div class="final_box">
+                        <p id="outputText"></p>
+                    </div>
+                    <div class="btn_box">
+                        <button class="btn_2"  id="copyButton" onclick="copyText()">Copiar</button>
+                        <button class="btn_2"  id="resetButton" onclick="resetSystem()">Reiniciar</button>
                     </div>
                 </div>
-                <img src="" alt="">
-                <div class="message-view">
-                    <div class="text-box">
-                        <div>
-                            <h5></h5>
-                            <img src="" alt="">
-                        </div>
-                        <div>
-                            <textarea name="" id=""></textarea>
-                        </div>
-                        <div>
-                            <p>0 caracteres/1000</p>
-                            <button>Cifrar</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            </div>
         </main>
-        <footer></footer>
+        <footer>
+            <p>Laura Ramírez</p>
+            <p>Alura Challenge</p>
+        </footer>
     </body>
+    <script src="main.js"></script>
 </html>
